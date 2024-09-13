@@ -12208,7 +12208,8 @@ iframe {
 }
 
 .texto-carta {
-  margin-bottom: 40px; /* Ajusta el valor según el espacio que necesites */
+  margin-top: 2rem;
+  margin-bottom: 5rem; /* Ajusta el valor según el espacio que necesites */
 }
 
 .social-icons {
