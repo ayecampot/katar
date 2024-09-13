@@ -177,5 +177,31 @@ window.addEventListener("scroll", () => {
 });
 
 
+window.onscroll = function() {
+  var whatsappButton = document.querySelector('.whatsapp-float');
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    whatsappButton.style.display = 'block';
+  } else {
+    whatsappButton.style.display = 'none';
+  }
+};
 
+  document.addEventListener("DOMContentLoaded", function () {
+    // Selecciona el enlace del navbar
+    const cartaLink = document.querySelector('a[href="#carta"]');
+    
+    cartaLink.addEventListener("click", function (e) {
+      e.preventDefault(); // Evita el comportamiento predeterminado del enlace
 
+      // Desplázate suavemente a la sección "CARTA" con un ajuste de -100 píxeles (puedes cambiar este valor)
+      const targetSection = document.querySelector("#carta");
+      const offset = -100; // Ajusta este valor según tus necesidades
+      const elementPosition = targetSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    });
+  });

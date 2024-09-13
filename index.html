@@ -44,21 +44,50 @@
         </button>
         <!-- Menú desplegable -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto text-end">
             <li class="nav-item">
-              <a class="nav-link" href="#unidades">CARTA</a>
+              <a class="nav-link" href="#carta">CARTA</a> <!-- Cambia el href para apuntar al id "carta" -->
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#ubicacion">UBICACIÓN</a>
             </li>
-          </ul>
+          </ul>         
         </div>
       </div>
     </nav>
+    
+    
     <!-- Masthead-->
-    <header style="padding: 0; margin: 0;">
+    <header class="header-large">
       <img src="./assets/img/foto_header.jpg" alt="header del restaurant, asador y logo" style="width: 100%; height: 900px; object-fit: cover;">
     </header>
+    
+    <header class="header-small">
+      <img src="./assets/img/header_mobile.jpg" alt="header para pantallas pequeñas, carne al asador" style="width: 100%; height: 500px; object-fit: cover;">
+    </header>
+    
+    <style>
+      /* Mostrar el header grande por defecto */
+      .header-large {
+        display: block;
+      }
+    
+      .header-small {
+        display: none;
+      }
+    
+      /* Media query para pantallas pequeñas */
+      @media (max-width: 768px) {
+        .header-large {
+          display: none;
+        }
+    
+        .header-small {
+          display: block;
+        }
+      }
+    </style>
+    
     <!-- Projects-->
     <section class="projects-section  js-scroll slide-left" id="projects">
       <div class="container px-4 px-lg-5">
@@ -91,6 +120,7 @@
         </div>
       </div>
     </div>
+    
 <!-- Project Two Row-->
 <div class="row gx-0 justify-content-center js-scroll slide-right">
   <div class="col-lg-5">
@@ -120,32 +150,92 @@
     </div>
   </div>
 </div>
-    </section>
-    <section class="img2 d-flex align-items-center justify-content-center">
-      <div class="text-center text-white">
-        <span class="trans ptext">Vení a disfrutar de la experiencia KATAR</span>  
-      </div>
-    </section>
-    <div class="row justify-content-center mt-5 margin-0">
-      <p class="text-center mt-4 fs-2 texto-carta">¡Mira nuestra carta!</p>
-      <!-- Botón con estilo en línea para cambiar color y mantener bordes redondeados -->
-      <a class="col-lg-2 btn text-center mt-3 mb-2 shrink" href="./assets/olsen.pdf" target="_blank" download
-        style="background-color: #a28456; color: #fff; border: none; border-radius: 5px;">
-        Descargar nuestra carta
-      </a>
-    </div>
+
+
+<div class="row justify-content-center mt-5 margin-0 .texto-carta">
+  <p class="text-center mt-4 fs-2 texto-carta">¡Tu mesa te está esperando, escribinos para hacer tu reserva!
+    <!-- Botón de WhatsApp reemplazando al botón de correo -->
+    <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button"><i class="m-2 bi bi-whatsapp shrink"></i></a> <!-- Reemplaza 1234567890 con el número de teléfono de la empresa -->
+ </p>
+ 
+</div>
+
+<section id="carta" class="img2 d-flex align-items-center justify-content-center full-width">
+  <div class="text-center text-white">
+    <span class="trans ptext">Vení a disfrutar de la experiencia KATAR</span>  
+  </div>
 </section>
+<div class="row justify-content-center mt-5 margin-0">
+  <p class="text-center mt-4 fs-2 texto-carta" style="margin-bottom: 3px;">
+    ¡Mirá nuestra carta!
+  </p>
+  <!-- Botón con estilo en línea para cambiar color y mantener bordes redondeados -->
+  <a class="col-lg-2 btn text-center mt-3 mb-2 shrink" href="" target="_blank" download
+    style="background-color: #a28456; color: #fff; border: none; border-radius: 5px;">
+    Descargar nuestra carta
+  </a>
+</div>
+
+
+<section class="container px-2 px-lg-2 mt-2 pt-3 ">
+  <div class="row mb-5 mb-lg-0  mt-lg-3 mt-md-4  ">
+    <div class="text-center container">
+      <div class="row mb-2">
+      </div>
+      <div class="row d-flex align-items-center">
+         <div class="col-1 d-flex align-items-center justify-content-center">
+            <a role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            </a>
+         </div>
+         <div class="col-12">
+            <!--Start carousel-->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+   
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div style="background-image:url('./assets/img/unidades/plato_1.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                        </div>
+                        <div style="background-image:url('./assets/img/unidades/plato_2.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                        </div>
+                        <div style="background-image:url('./assets/img/unidades/plato_3.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" >
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                      <div style="background-image:url('./assets/img/unidades/plato_4.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('./assets/img/unidades/plato_5.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('./assets/img/unidades/plato_6.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" >
+                      </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--End carousel-->
+         </div>
+         <div class="col-1 d-flex align-items-center justify-content-center"><a role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            </a>
+         </div>
+      </div>
+   </div>
+  </div>
+</section> 
+
 <hr class="mt-5 mb-5">
-<section id="ubicacion">
+<section id="ubicacion" class="full-width">
   <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1644.3891526736193!2d-59.2222362936131!3d-34.483147848005395!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1725893482127!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
+
+
 <!-- Footer-->
 <footer class="container footer small text-center text-white-50">
   <div class="justify-content-center">
-      <a href="https://www.instagram.com/katar_resto/" target="_blank"><i class="m-2 bi bi-instagram shrink"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61565382172059" target="_blank"><i class="m-2 bi bi-facebook shrink"></i></a>
-      <!-- Botón de WhatsApp reemplazando al botón de correo -->
-      <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button"><i class="m-2 bi bi-whatsapp shrink"></i></a> <!-- Reemplaza 1234567890 con el número de teléfono de la empresa -->
+      <a href="https://www.instagram.com/katar_resto/" target="_blank"><i class="m-2 bi bi-instagram shrink social-icons"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61565382172059" target="_blank"><i class="m-2 bi bi-facebook shrink social-icons"></i></a>
+     
   </div>
   <div class="row-2 justify-content-center">
       <hr class="col-md-5 mt-5 mb-5 hr-50">
@@ -154,6 +244,12 @@
     Copyright &copy; KATAR Restó de Campo 2024 by Campot HMNOS
   </div>
 </footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->

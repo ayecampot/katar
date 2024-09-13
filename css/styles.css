@@ -172,19 +172,23 @@ body {
   line-height: 27px;
 }
 
-/* acarousel a manito */
+/* acarousel a manito; bueno, ya no tanto, ya fue un poco modificado con asistencia de IA ;_; */
 
 .carousel-nav-icon {
   height: 48px;
   width: 48px;
 }
 
-.carousel-item  .col, .col-sm, .col-md {
-     margin: 8px;
-     height: 300px;
-     background-size: cover;
-     background-position: center center;
-  }
+.carousel-item .col, .col-sm, .col-md {
+  border-right: 10px solid #ebebe9; /* Crea una separación mínima visible */
+  margin-left: 0;  /* Sin margen izquierdo */
+  margin-right: 0; /* Sin margen derecho */
+  margin-top: 8px; /* Mantiene el margen vertical */
+  margin-bottom: 8px; /* Mantiene el margen vertical */
+  height: 275px; 
+  background-size: cover;
+  background-position: center center;
+}
 
 .texto-cuerpo{
   font-size: 12px;
@@ -243,7 +247,6 @@ padding: 2rem 3rem 2rem 3rem !important;
 .js-scroll.scrolled {
   opacity: 1;
 }
-
 
 .scrolled.slide-left {
   animation: slide-in-left 1s ease-in-out both;
@@ -4316,6 +4319,37 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
+/* Ajusta la posición del menú en pantallas pequeñas */
+@media (max-width: 991.98px) {
+  #navbarResponsive {
+    text-align: right;
+    padding-top: 0; /* Elimina el padding superior para reducir el espacio entre el menú y el botón hamburguesa */
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+    text-align: right;
+    padding-top: 0; /* Asegura que el padding superior del contenedor de la lista sea cero */
+  }
+
+  .navbar-nav .nav-item {
+    margin-top: 0; /* Asegura que no haya margen superior entre los elementos del menú */
+  }
+
+  .navbar-nav .nav-link {
+    padding-top: 0.5rem; /* Ajusta el padding superior para reducir el espacio entre los elementos del menú y el botón hamburguesa */
+    padding-bottom: 0.5rem; /* Ajusta el padding inferior si es necesario */
+  }
+}
+
+/* Aplica un padding inferior al último elemento del menú */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item:last-child {
+    margin-bottom: 10px; /* Ajusta este valor según lo necesario */
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
@@ -4425,6 +4459,7 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
+  margin: 0;
 }
 .navbar-nav {
   display: flex;
@@ -4460,6 +4495,7 @@ textarea.form-control-lg {
   border: 1px solid transparent;
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
+  margin-left: auto;
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -12056,4 +12092,125 @@ h2{
   .nav-0{
     margin:0px;
   }
+}
+
+@media (max-width: 371px) {
+  .navbar-brand {
+    max-width: 80%; /* Ajusta el ancho del logo */
+    padding: 0; /* Elimina cualquier padding que pueda empujar el botón */
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    margin-top: 20px; /* Ajusta este valor según la separación deseada */
+  }
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between; /* Asegura que el logo y el botón estén en extremos opuestos */
+}
+
+/* Alinea los elementos del menú a la derecha en pantallas pequeñas */
+/* Ajusta la posición del menú en pantallas pequeñas */
+@media (max-width: 991.98px) {
+  #navbarResponsive {
+    text-align: right;
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+    text-align: right;
+    padding-top: 0; /* Elimina espacio extra entre los elementos y el botón hamburguesa */
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end !important;
+    padding-top: 0; /* Reduce el espacio superior entre el botón hamburguesa y el menú */
+  }
+
+  .navbar-nav .nav-item {
+    margin-top: 0; /* Reduce el espacio entre los elementos y el botón */
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px; /* Tamaño base del botón */
+  height: 60px;
+  bottom: 20px; /* Distancia al borde inferior */
+  right: 20px; /* Distancia al borde derecho */
+  background-color: #a28456;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px; /* Tamaño base del ícono */
+  line-height: 60px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: bottom right; /* El botón se escala desde esta esquina */
+}
+
+/* Ajuste para escalar en pantallas menores */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    transform: scale(0.8); /* Escala completa del botón e ícono */
+  }
+}
+
+/* Ajuste para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    transform: scale(0.6); /* Escala aún más pequeña */
+  }
+}
+
+.whatsapp-float i {
+  color: #ebebe9;
+  font-size: inherit; /* Mantiene el tamaño del ícono en proporción */
+}
+
+
+.whatsapp-float {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .texto-cuerpo {
+    font-weight: 299; /* Baja el peso de la fuente en mobile */
+    font-size: 15px;  /* Aumenta el tamaño de la fuente en mobile */
+    line-height: 1.6; /* Ajusta la altura de línea para mejor legibilidad */
+  }
+
+  h4.text-black {
+    font-weight: 300;  /* Ajusta el peso del título */
+    font-size: 18px;   /* Aumenta el tamaño del título en mobile */
+  }
+}
+
+iframe {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.full-width {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+}
+
+.texto-carta {
+  margin-bottom: 40px; /* Ajusta el valor según el espacio que necesites */
+}
+
+.social-icons {
+  font-size: 250%; /* Agranda los íconos al 120% del tamaño original */
 }
