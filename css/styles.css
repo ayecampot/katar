@@ -12215,3 +12215,24 @@ iframe {
 .social-icons {
   font-size: 250%; /* Agranda los íconos al 120% del tamaño original */
 }
+
+
+/* Mostrar el header grande por defecto */
+.header-large {
+  display: block;
+}
+
+.header-small {
+  display: none;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-large {
+    display: none;
+  }
+
+  .header-small {
+    display: block;
+  }
+}
